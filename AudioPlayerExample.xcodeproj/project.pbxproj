@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		4F3A01ED25B0C7AA001BE278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A01EC25B0C7AA001BE278 /* Assets.xcassets */; };
 		4F3A01F025B0C7AA001BE278 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A01EF25B0C7AA001BE278 /* Preview Assets.xcassets */; };
 		4F3A01F325B0C7AA001BE278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A01F125B0C7AA001BE278 /* LaunchScreen.storyboard */; };
+		4F3A01FC25B0C7B6001BE278 /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A01FB25B0C7B6001BE278 /* Conductor.swift */; };
+		4F3A01FF25B0C7BC001BE278 /* track.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A01FE25B0C7BC001BE278 /* track.mp3 */; };
+		4F3A020325B0C81D001BE278 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4F3A020225B0C81D001BE278 /* AudioKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,8 @@
 		4F3A01EF25B0C7AA001BE278 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F3A01F225B0C7AA001BE278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F3A01F425B0C7AA001BE278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F3A01FB25B0C7B6001BE278 /* Conductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conductor.swift; sourceTree = "<group>"; };
+		4F3A01FE25B0C7BC001BE278 /* track.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = track.mp3; path = ../../../../../../../Desktop/track.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3A020325B0C81D001BE278 /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +64,11 @@
 		4F3A01E225B0C7AA001BE278 /* AudioPlayerExample */ = {
 			isa = PBXGroup;
 			children = (
+				4F3A01FE25B0C7BC001BE278 /* track.mp3 */,
 				4F3A01E325B0C7AA001BE278 /* AppDelegate.swift */,
 				4F3A01E525B0C7AA001BE278 /* SceneDelegate.swift */,
 				4F3A01E725B0C7AA001BE278 /* ContentView.swift */,
+				4F3A01FB25B0C7B6001BE278 /* Conductor.swift */,
 				4F3A01EC25B0C7AA001BE278 /* Assets.xcassets */,
 				4F3A01F125B0C7AA001BE278 /* LaunchScreen.storyboard */,
 				4F3A01F425B0C7AA001BE278 /* Info.plist */,
@@ -94,6 +102,9 @@
 			dependencies = (
 			);
 			name = AudioPlayerExample;
+			packageProductDependencies = (
+				4F3A020225B0C81D001BE278 /* AudioKit */,
+			);
 			productName = AudioPlayerExample;
 			productReference = 4F3A01E025B0C7AA001BE278 /* AudioPlayerExample.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +132,9 @@
 				Base,
 			);
 			mainGroup = 4F3A01D725B0C7AA001BE278;
+			packageReferences = (
+				4F3A020125B0C81D001BE278 /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = 4F3A01E125B0C7AA001BE278 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3A01FF25B0C7BC001BE278 /* track.mp3 in Resources */,
 				4F3A01F325B0C7AA001BE278 /* LaunchScreen.storyboard in Resources */,
 				4F3A01F025B0C7AA001BE278 /* Preview Assets.xcassets in Resources */,
 				4F3A01ED25B0C7AA001BE278 /* Assets.xcassets in Resources */,
@@ -150,6 +165,7 @@
 			files = (
 				4F3A01E425B0C7AA001BE278 /* AppDelegate.swift in Sources */,
 				4F3A01E625B0C7AA001BE278 /* SceneDelegate.swift in Sources */,
+				4F3A01FC25B0C7B6001BE278 /* Conductor.swift in Sources */,
 				4F3A01EB25B0C7AA001BE278 /* AudioPlayerExample.xcdatamodeld in Sources */,
 				4F3A01E825B0C7AA001BE278 /* ContentView.swift in Sources */,
 			);
@@ -349,6 +365,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F3A020125B0C81D001BE278 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				branch = "v5-develop";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F3A020225B0C81D001BE278 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F3A020125B0C81D001BE278 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4F3A01E925B0C7AA001BE278 /* AudioPlayerExample.xcdatamodeld */ = {
